@@ -438,10 +438,14 @@
   notifyCheckbox.addEventListener("change", () => {
     if (notifyCheckbox.checked) {
       notifyCheckbox.style.backgroundColor = "lightgreen";
-      console.log("Habilitado");
+      showToast("Resposta: A", {
+         icon: "🔺",
+      });
     } else {
-      notifyCheckbox.style.backgroundColor = "lightcoral";
-      console.log("Desabilitado");
+      notifyCheckbox.style.backgroundColor = "lightgreen";
+      showToast("Resposta: B", {
+         icon: "🔺",
+      });
     }
   });
   notifyLabel.prepend(notifyCheckbox);
